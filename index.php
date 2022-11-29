@@ -29,8 +29,9 @@
             <!-- todolist -->
             <ut class="to-do-list">
                 <!-- todo -->
-                <li class="d-flex" v-for="(todo, index) in toDoList" :key="index" @click="toggleDone(index)">
+                <li class="d-flex d-flex justify-content-between" :class="{'bg-success' : todo.done, 'bg-secondary' : !todo.done}" v-for="(todo, index) in toDoList" :key="index" @click="toggleDone(index)">
                     <div class="name">{{todo.text}}</div>
+                    <button class="btn btn-danger" @click="deleteToDo(index)">Remove</button>
                 </li>
                 <!-- todo -->
             </ut>

@@ -13,8 +13,7 @@ if (isset($_POST["newToDo"])) {
     ];
     // put in json
     file_put_contents("todo.json", json_encode($toDoList));
-}
-
+};
 
 // send data
 header("Content-Type: application/json");

@@ -29,7 +29,13 @@ createApp({
         },
         toggleDone(index){
             this.toDoList[index].done = !this.toDoList[index].done;
+        },
+        deleteToDo(index){
+            this.toDoList[index].done = "del";
+            axios.get("server.php").then((resp)=>{
+                resp.data = this.toDoList;
+            })
         }
-    }
-
+    },
+    
 }).mount("#app");

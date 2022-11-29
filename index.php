@@ -29,7 +29,7 @@
             <!-- todolist -->
             <ut class="to-do-list">
                 <!-- todo -->
-                <li class="to-do d-flex" v-for="(todo, index) in toDoList" :key="index">
+                <li class="d-flex" v-for="(todo, index) in toDoList" :key="index" @click="toggleDone(index)">
                     <div class="name">{{todo.text}}</div>
                 </li>
                 <!-- todo -->

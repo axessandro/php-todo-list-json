@@ -26,6 +26,10 @@ createApp({
                 // clear input
                 this.newToDo = "";
             })
+        },
+        toggleDone(index){
+            this.toDoList[index].done = !this.toDoList[index].done;
         }
     }
+
 }).mount("#app");
